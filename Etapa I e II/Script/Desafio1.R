@@ -10,7 +10,7 @@ library(stringi)
 library(writexl)
 
 ## Ler planilha
-dados <- read_xlsx("I:/Meu Drive/Job_applications/CPI/Desafio_Analista_Dados_CPI_2025/Desafio_Analista_Dados_CPI_2025/Etapa I e II/Desafio1 - SIOP.xlsx")
+dados <- read_xlsx("./Etapa I e II/Desafio1 - SIOP.xlsx")
 
 ## a.Crie uma coluna chamada unidade_orcamentaria apenas com o código
 result <- dados %>%
@@ -22,7 +22,7 @@ result <- dados %>%
       stri_trans_general("Latin-ASCII") %>%
       # Remove todos os caracteres não alfanuméricos e espaços extras
       str_remove_all("[^[:alnum:] ]") %>%
-      # Substituir múltiplos espaços por um único
+      # Substitui múltiplos espaços por um único
       str_squish()
   )
 
@@ -39,13 +39,13 @@ result <- result %>%
 result <- result %>%
   mutate(
     programa = Programa %>%
-      # Remover o identificador numérico e " – "
+      # Remove o identificador numérico e " – "
       str_remove("^\\d+\\s?[-–]\\s?") %>%
       # Remove caracteres especiais e acentos
       stri_trans_general("Latin-ASCII") %>%
       # Remove todos os caracteres não alfanuméricos e espaços extras
       str_remove_all("[^[:alnum:] ]") %>%
-      # Substituir múltiplos espaços por um único
+      # Substitui múltiplos espaços por um único
       str_squish()
   )
 
@@ -68,7 +68,7 @@ result <- result %>%
       stri_trans_general("Latin-ASCII") %>%
       # Remove todos os caracteres não alfanuméricos e espaços extras
       str_remove_all("[^[:alnum:] ]") %>%
-      # Substituir múltiplos espaços por um único
+      # Substitui múltiplos espaços por um único
       str_squish()
   )
 

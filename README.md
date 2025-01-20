@@ -14,7 +14,7 @@ Julia Niemeyer
 
 ## Requisitos
 - R (versão 4.0 ou mais recente)
-- Pacotes: `dplyr`, `readxl`
+- Pacotes: `dplyr`, `readxl`,`stringr`, `stringi`, `writexl`
 
 ---
 
