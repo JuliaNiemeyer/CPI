@@ -13,7 +13,10 @@ Julia Niemeyer
 ---
 
 ## Requisitos
-- R (versão 4.0 ou mais recente)
+- Python (versão 3.13.1 ou superior)
+- Pacotes: `pdfplumber`, `pathlib`,`os`, `pandas`
+
+- R (versão 4.0 ou superior)
 - Pacotes: `dplyr`, `readxl`,`stringr`, `stringi`, `writexl`
 
 ---
