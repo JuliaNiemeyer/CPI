@@ -19,7 +19,7 @@ caminho_relativo = diretorio_atual / 'Etapa III' / 'Exemplo_Acao.pdf'
 # Cria caminho relativo de output 
 caminho_output = diretorio_atual / 'Etapa III' / 'Resultado_III' / 'Extracao_acao_JuliaNiemeyer.xlsx' 
 
-# Open the PDF with pdfplumber
+# Abre pdf
 with pdfplumber.open(caminho_relativo) as pdf:
     # Para pegar em informações de todas as páginas do PDF
     for pagina in pdf.pages:
