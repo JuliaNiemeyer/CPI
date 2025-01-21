@@ -1,17 +1,19 @@
+## CPI - Desafio para analista de dados
+## Julia Niemeyer - 2025
+#Desafio IV – Capacidade de checar dupla contagem por similaridades e uniões
+
 # Instalar pacotes necessários
 library(dplyr)
 library(readxl)
-library(readr)
 library(stringi)
 library(stringr)
 library(text2vec)
-library(tm)
 library(writexl)
 library(stringdist)
 
 ## Ler planilhas
-base1 <- read_csv("./Etapa IV/Base1.csv")
-base2 <- read_xlsx("./Etapa IV/Base2.xlsx")
+base1 <- read_csv("./Etapa_IV/Base1.csv")
+base2 <- read_xlsx("./Etapa_IV/Base2.xlsx")
 
 #limpar planilhas de caracteres especiais etc.
 df1 <- base1 %>%
@@ -85,17 +87,17 @@ comparar_jaccard <- function(df1, df2) {
 resultados_jaccard <- comparar_jaccard(df1, df2)
 
 # Exibir os resultados
-View(resultados_jaccard)
+#View(resultados_jaccard)
 
 #Filtrar resultado
 result_df <- resultados_jaccard %>%
     filter(resultados_jaccard$JaccardIndex >= 0.5555556) 
 
-View(result_df)
+#View(result_df)
 
 #Retirar manualmente os que não são semelhantes/iguais
 final_df <- result_df[-c(3,4,9:14,16,20:23,25:29),]
 View(final_df)
 
 ## salvar resultado
-write_xlsx(final_df, "./Etapa IV/Resultado_IV/Resultado_DesafioIV_JuliaNiemeyer.xlsx")
+write_xlsx(final_df, "./Etapa_IV/Resultado_IV/Resultado_DesafioIV_JuliaNiemeyer.xlsx")

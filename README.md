@@ -17,7 +17,14 @@ Julia Niemeyer
 - Pacotes: `pdfplumber`, `pathlib`,`os`, `pandas`
 
 - R (versão 4.0 ou superior)
-- Pacotes: `dplyr`, `readxl`,`stringr`, `stringi`, `writexl`
+- Pacotes: `dplyr`, `readxl`,`stringr`, `stringi`, `writexl`, `text2vec`, `stringdist`
+
+---
+
+## Scripts:
+- Desafio1.R - Tratamento e padronização dos dados - em R
+- Desafio3.py -  Manipulação de dados não estruturados (PDF) - em Python
+- Desafio4_Jaccard.R - Capacidade de checar dupla contagem por similaridades e uniões - em R
 
 ---
 
